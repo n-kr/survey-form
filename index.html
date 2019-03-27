@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Survey Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Let us know how we can improve freeCodeCamp</p>
+    </header>
+    <main>
+        <form id="survey-form">
+            <fieldset>
+                <legend>Personal information</legend>
+                <label for="name" id="name-label" class="question">Name: </label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" class="answer" required>
+                <label for="email" id="email-label" class="question">E-mail: </label>
+                <input type="email" id="email" name="email" placeholder="Enter your e-mail address" class="answer" required>
+                <label for="number" id="number-label" class="question">Age: </label>
+                <input type="number" id="number" name="age" placeholder="Enter your age" min="1" max="120" class="answer" required>
+                <label for="dropdown" class="question">Current role:</label>
+                <select id="dropdown" name="role" class="answer align-top select" size="1" required>
+                    <option disabled value="">Please select an option</option>
+                    <option value="student">Student</option>
+                    <option value="full-time-job">Full time job</option>
+                    <option value="full-time-learner">Full time learner</option>
+                    <option value="prefer-not-to-tell">Prefer not to tell</option>
+                    <option value="other">Other</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Recommendation</legend>
+                <label class="question align-top">Would you recommend freeCodeCamp to a friend?</label>
+                <div class="answer choices">
+                    <div>
+                        <input type="radio" name="recommendation" value="definitely" id="definitely" required checked>
+                        <label for="definitely">
+                            Definitely
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="recommendation" value="maybe" id="maybe" required>
+                        <label for="maybe">Maybe</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="recommendation" value="not-sure" id="not-sure">
+                        <label for="not-sure">Not sure</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Preferences</legend>
+                <label class="question">What do you like most in FCC?</label>
+                <select name="like" id="like" class="answer align-top select" size="1" required>
+                    <option value="" disabled>Please select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open-source">Open source</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Improvement</legend>
+                <label class="question align-top">Things that should be improved in the future:
+                    <br>
+                    <small>(Check all that apply)</small></label>
+                <div class="answer choices">
+                    <div>
+                        <label for="frontend">
+                            <input type="checkbox" name="improvement" value="frontend" id="frontend">Frontend Projects</label>
+                    </div>
+                    <div>
+                        <label for="backend">
+                            <input type="checkbox" name="improvement" value="backend" id="backend">Backend Projects</label>
+                    </div>
+                    <div>
+                        <label for="data-visualization">
+                            <input type="checkbox" name="improvement" value="data-visualization" id="data-visualization">Data Visualization</label>
+                    </div>
+                    <div>
+                        <label for="challenges">
+                            <input type="checkbox" name="improvement" value="challenges" id="challenges">Challenges</label>
+                    </div>
+                    <div>
+                        <label for="open-source">
+                            <input type="checkbox" name="improvement" value="open-source" id="open-source">Open Source Community</label>
+                    </div>
+                    <div>
+                        <label for="gitter-help-rooms">
+                            <input type="checkbox" name="improvement" value="gitter-help-rooms" id="gitter-help-rooms">Gitter help rooms</label>
+                    </div>
+                    <div>
+                        <label for="videos">
+                            <input type="checkbox" name="improvement" value="videos" id="videos">Videos</label>
+                    </div>
+                    <div>
+                        <label for="city-meetups">
+                            <input type="checkbox" name="improvement" value="city-meetups" id="city-meetups">City Meetups</label>
+                    </div>
+                    <div>
+                        <label for="wiki">
+                            <input type="checkbox" name="improvement" value="wiki" id="wiki">Wiki</label>
+                    </div>
+                    <div>
+                        <label for="forum">
+                            <input type="checkbox" name="improvement" value="forum" id="forum">Forum</label>
+                    </div>
+                    <div>
+                        <label for="additional-courses">
+                            <input type="checkbox" name="improvement" value="additional-courses" id="additional-courses">Additional Courses</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Suggestions</legend>
+                <label for="suggestions" class="question">Any Comments or Suggestions?</label>
+                <textarea name="suggestion" id="suggestions" class="answer align-top textarea" cols="30" rows="10" placeholder="Enter your comment here"></textarea>
+            </fieldset>
+            <div class="submit-box">
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </form>
+    </main>
+    <footer>Natasa K 2019</footer>
+</body>
+
+</html>
